@@ -1,11 +1,7 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>MGC Mobile Gun Cleaning | Missoula MT</title>
@@ -13,201 +9,225 @@
 <style>
 
 body {
-
     margin: 0;
-
     font-family: Arial, sans-serif;
-
     background-color: #000;
-
     color: #fff;
-
+    scroll-behavior: smooth;
 }
 
 /* NAVBAR */
 
 .navbar {
-
     display: flex;
-
     justify-content: space-between;
-
+    align-items: center;
     padding: 20px;
-
     background: #111;
-
     border-bottom: 1px solid #333;
-
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .navbar h1 {
-
     margin: 0;
-
-    font-size: 20px;
-
-    letter-spacing: 2px;
-
+    font-size: 24px;
+    letter-spacing: 3px;
 }
 
 .navbar a {
-
     color: #fff;
-
     text-decoration: none;
-
     margin-left: 20px;
-
+    transition: 0.3s;
 }
 
-/* HERO BANNER */
+.navbar a:hover {
+    color: #999;
+}
+
+/* HERO */
 
 .hero {
-
-    height: 80vh;
-
+    height: 90vh;
     background: url('https://images.unsplash.com/photo-1604079628891-ec1c1c3a8b0e') center/cover no-repeat;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     text-align: center;
-
 }
 
 .hero-overlay {
-
-    background: rgba(0,0,0,0.7);
-
-    padding: 40px;
-
+    background: rgba(0,0,0,0.75);
+    padding: 50px;
+    border: 1px solid #444;
+    max-width: 700px;
 }
 
 .hero h2 {
-
-    font-size: 40px;
-
-    margin-bottom: 10px;
-
+    font-size: 48px;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
 }
 
 .hero p {
-
     font-size: 18px;
-
-    margin-bottom: 20px;
-
+    margin-bottom: 25px;
+    line-height: 1.6;
 }
 
 .btn {
-
     background: #fff;
-
     color: #000;
-
-    padding: 12px 25px;
-
+    padding: 14px 28px;
     text-decoration: none;
-
     font-weight: bold;
-
     border-radius: 5px;
+    margin: 5px;
+    display: inline-block;
+    transition: 0.3s;
+}
 
+.btn:hover {
+    background: #999;
 }
 
 /* SECTIONS */
 
 .section {
-
-    padding: 60px 20px;
-
+    padding: 70px 20px;
     text-align: center;
-
 }
 
 .section h2 {
-
+    font-size: 34px;
     margin-bottom: 20px;
-
+    letter-spacing: 1px;
 }
 
 /* SERVICES */
 
 .services {
-
     display: flex;
-
     flex-wrap: wrap;
-
     justify-content: center;
-
-    gap: 20px;
-
+    gap: 25px;
 }
 
 .card {
-
     background: #111;
-
-    padding: 20px;
-
-    width: 250px;
-
+    padding: 25px;
+    width: 280px;
     border: 1px solid #333;
-
     border-radius: 10px;
-
+    transition: 0.3s;
 }
 
-/* CTA BANNER */
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #777;
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+/* PRICING */
+
+.pricing-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.price-card {
+    background: #111;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 30px;
+    width: 300px;
+}
+
+.price-card h3 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.price {
+    font-size: 18px;
+    margin: 12px 0;
+}
+
+/* CTA */
 
 .cta {
-
     background: #fff;
-
     color: #000;
-
-    padding: 40px;
-
+    padding: 60px 20px;
+    text-align: center;
 }
 
 .cta a {
-
     background: #000;
-
     color: #fff;
-
-    padding: 12px 20px;
-
+    padding: 14px 24px;
     text-decoration: none;
-
-    margin-top: 10px;
-
+    margin: 10px;
     display: inline-block;
+    border-radius: 5px;
+    transition: 0.3s;
+}
 
+.cta a:hover {
+    background: #333;
+}
+
+/* CONTACT */
+
+.contact-buttons {
+    margin-top: 20px;
+}
+
+.contact-buttons a {
+    display: inline-block;
+    margin: 10px;
 }
 
 /* FOOTER */
 
 .footer {
-
     padding: 20px;
-
     background: #111;
-
     border-top: 1px solid #333;
-
     text-align: center;
-
     font-size: 14px;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar div {
+        margin-top: 10px;
+    }
+
+    .hero h2 {
+        font-size: 34px;
+    }
+
+    .hero-overlay {
+        margin: 20px;
+    }
 
 }
 
 </style>
-
 </head>
 
 <body>
@@ -219,13 +239,10 @@ body {
     <h1>MGC</h1>
 
     <div>
-
         <a href="#services">Services</a>
-
+        <a href="#pricing">Pricing</a>
         <a href="#about">About</a>
-
-        <a href="#contact">Book</a>
-
+        <a href="#contact">Contact</a>
     </div>
 
 </div>
@@ -236,11 +253,16 @@ body {
 
     <div class="hero-overlay">
 
-        <h2>Mobile Firearm Cleaning</h2>
+        <h2>MGC Mobile Gun Cleaning</h2>
 
-        <p>Mobile gun cleaning is a booking service catered to people who love the fun but are tired of cleaning their own guns.</p>
+        <p>
+            Professional mobile firearm cleaning services in Missoula, Montana.
+            Same-day turnaround, professional care, and reliable service brought directly to you.
+        </p>
 
         <a href="#contact" class="btn">Book Now</a>
+
+        <a href="sms:+13077977711" class="btn">Text Us</a>
 
     </div>
 
@@ -256,25 +278,92 @@ body {
 
         <div class="card">
 
-            <h3>All firearms</h3>
+            <h3>All Firearms</h3>
 
-            <p>Mobile Gun Cleaning is able to clean ALL firearms. With the ability to knowledgbly ensure the firearm is kemt in the upmost manner</p>
-
-        </div>
-
-        <div class="card">
-
-            <h3>NFA</h3>
-
-            <p>With a crew of gunsmiths and NFA items on the rise we are able to clean all NFA items.</p>
+            <p>
+                We service pistols, rifles, shotguns, and more with professional attention to detail and firearm safety.
+            </p>
 
         </div>
 
         <div class="card">
 
-            <h3>Mobile services</h3>
+            <h3>NFA Items</h3>
 
-            <p>We offer a mobile option that allows for either a pick up and drop off same day or cleaning in house. NFA items must be in hosue at this time</p>
+            <p>
+                Experienced handling and cleaning of suppressors and other NFA-regulated items.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Mobile Convenience</h3>
+
+            <p>
+                Pickup/drop-off or mobile on-site service available throughout the Missoula area.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- PRICING -->
+
+<div class="section" id="pricing">
+
+    <h2>Pricing</h2>
+
+    <div class="pricing-container">
+
+        <div class="price-card">
+
+            <h3>Basic Cleaning</h3>
+
+            <div class="price">Low Complexity — $30</div>
+
+            <div class="price">High Complexity — $40</div>
+
+            <p>
+                Standard cleaning and maintenance to keep your firearm reliable and range-ready.
+            </p>
+
+        </div>
+
+        <div class="price-card">
+
+            <h3>Detailed Strip Cleaning</h3>
+
+            <div class="price">Low Complexity — $50</div>
+
+            <div class="price">High Complexity — $80</div>
+
+            <p>
+                Full detailed disassembly and deep cleaning for heavily used firearms.
+            </p>
+
+        </div>
+
+        <div class="price-card">
+
+            <h3>Promo Special</h3>
+
+            <div class="price">$20 Basic Cleaning</div>
+
+            <p>
+                Available in exchange for:
+            </p>
+
+            <p>
+                ✔ Google Review<br>
+                ✔ Permission to film cleaning for short-form marketing content
+            </p>
+
+            <p>
+                Veteran Discount: 10% Off
+            </p>
 
         </div>
 
@@ -288,11 +377,17 @@ body {
 
     <h2>Why Choose MGC?</h2>
 
-    <p>Mobile Gun Cleaning is starting to get its bearings but it brings years of knowledge with a team of certified gun smiths. </p>
-    
-    <p>Mobile service across Missoula, Lolo, Bonner, Frenchtown, and Florence.</p>
+    <p>
+        MGC Mobile Gun Cleaning combines professional firearm knowledge with convenient mobile service.
+    </p>
 
-    <p>Same day turnaround, professional care, and reliable service you can trust.</p>
+    <p>
+        Proudly serving Missoula, Lolo, Bonner, Frenchtown, and Florence.
+    </p>
+
+    <p>
+        Reliable service. Professional care. Built for responsible firearm owners.
+    </p>
 
 </div>
 
@@ -302,9 +397,13 @@ body {
 
     <h2>Book Your Cleaning Today</h2>
 
-    <p>Available discounts offfered to veterans.</p>
+    <p>
+        Mobile firearm cleaning with same-day turnaround options available.
+    </p>
 
-    <a href="#contact">Message to Book</a>
+    <a href="sms:+13077977711">Text to Book</a>
+
+    <a href="mailto:mgcmobileguncleaning@gmail.com">Email Us</a>
 
 </div>
 
@@ -312,10 +411,22 @@ body {
 
 <div class="section" id="contact">
 
-    <h2>Contact</h2>
+    <h2>Contact MGC</h2>
 
-    <p>Email: mgcMobileGunCleaning@gmail.com</p>
+    <p>Email: mgcmobileguncleaning@gmail.com</p>
+
     <p>Phone: 307-797-7711</p>
+
+    <p>Facebook: MGC Missoula</p>
+
+    <div class="contact-buttons">
+
+        <a href="sms:+13077977711" class="btn">Send Text Message</a>
+
+        <a href="mailto:mgcmobileguncleaning@gmail.com" class="btn">Send Email</a>
+
+    </div>
+
 </div>
 
 <!-- FOOTER -->
@@ -327,5 +438,4 @@ body {
 </div>
 
 </body>
-
 </html>
